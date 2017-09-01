@@ -9,6 +9,10 @@
   </head>
 
   <body>
-    <%= yield %>
+    <!-- This will give the div a class of "controller posts index" for example. This will be used for styling. -->
+    <div class="container <%= controller_name %> <%= action_name %>">
+      <%= render 'layouts/navbar'%>
+      <%= yield %>
+    </div>
   </body>
 </html>
