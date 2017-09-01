@@ -1,3 +1,17 @@
+// Styles for the Index/Main page
+.welcome {
+  padding-top: 150px;
+  padding-bottom: 10px;
+  border-bottom: .5px solid;
+  text-align: center;
+}
+
+.post {
+  padding-top: 20px;
+  position: relative;
+}
+
+// Styles for the Post partial
 .card {
   text-align: center;
   border: none;
@@ -5,7 +19,6 @@
   float: none;
   margin-bottom: 25px;
 }
-
 .card-publish {
   font-size: 12px;
 }
