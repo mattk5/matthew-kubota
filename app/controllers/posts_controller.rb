@@ -4,7 +4,11 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.most_recent
+    if admin_signed_in?
+      @posts = current_admin.posts.most_recent
+    else
+      @posts =Post.most_recent
+    end
   end
 
   # GET /posts/1
@@ -14,7 +18,7 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
-    @post = Post.new
+    @post = current_admin.posts.new
   end
 
   # GET /posts/1/edit
@@ -24,7 +28,7 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(post_params)
+    @post = current_admin.posts.new(post_params)
 
     respond_to do |format|
       if @post.save
@@ -64,7 +68,7 @@ class PostsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
-      @post = Post.friendly.find(params[:id])
+      @post = current_admin.posts.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

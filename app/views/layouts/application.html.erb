@@ -6,12 +6,15 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
   </head>
 
   <body>
     <!-- This will give the div a class of "controller posts index" for example. This will be used for styling. -->
     <div class="container <%= controller_name %> <%= action_name %>">
       <%= render 'layouts/navbar'%>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
       <%= yield %>
     </div>
   </body>

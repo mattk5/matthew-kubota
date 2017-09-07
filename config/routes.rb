@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :admins
   root 'posts#index'
   get 'about' => 'pages#about', as: :about
   get 'contact' => 'pages#contact', as: :contact

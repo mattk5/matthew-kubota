@@ -13,5 +13,13 @@
       <li class="nav-item">
         <%= link_to 'Contact', contact_path, class: "nav-link #{yield(:contact_active)}"%>
       </li>
+      <% if admin_signed_in? %>
+        <li class="nav-item">
+          <%= link_to 'My Posts', posts_path, class: "nav-link #{yield(:contact_active)}"%>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Log Out', destroy_admin_session_path, method: :delete, class: "nav-link"%>
+        </li>
+      <% end %>
     </ul>
 </nav>
