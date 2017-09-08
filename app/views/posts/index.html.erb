@@ -7,13 +7,13 @@
   <% else %>
     <% provide(:page_title, 'Blog') %>
     <% provide(:blog_active, 'active') %>
-      <div class="row welcome">
+      <div class="row page_title">
         <h1>Blog Posts</h1>
       </div>
-      <div class="row post">
+      <div class="row post_list">
         <%= render @posts %>
       </div>
-      <div class="paginate digg_pagination">
+      <div class="digg_pagination">
         <%= will_paginate @posts, :page_links => false %>
       </div>
   <% end %>
