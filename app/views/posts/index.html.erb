@@ -13,5 +13,8 @@
       <div class="row post">
         <%= render @posts %>
       </div>
+      <div class="paginate digg_pagination">
+        <%= will_paginate @posts, :page_links => false %>
+      </div>
   <% end %>
 </div>

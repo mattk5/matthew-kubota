@@ -8,7 +8,7 @@ class PostsController < ApplicationController
     if admin_signed_in?
       @posts = current_admin.posts.most_recent
     else
-      @posts = Post.most_recent.published
+      @posts = Post.most_recent.published.paginate(:page => params[:page], per_page: 3)
     end
   end
 
