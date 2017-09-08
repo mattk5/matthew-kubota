@@ -1,14 +1,14 @@
 <% provide(:page_title, @post.title)%>
 <% provide(:blog_active, 'active')%>
 
-<div class="row">
+<div class="container">
   <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
     <h1><%= @post.title %></h1>
-    <p><%= @post.published_date %></p>
+    <p class="published"><%= @post.published_date %></p>
     <%= @post.body.html_safe %>
   </div>
 </div>
 <% if admin_signed_in? %>
   <%= link_to 'Edit', edit_post_path(@post) %> |
 <% end %>
-<%= link_to 'Back to Posts', posts_path %>
+<%= link_to 'Back to Posts', posts_path, class: 'back-posts' %>
