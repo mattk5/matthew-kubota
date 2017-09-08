@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :destroy, :publish, :unpublish]
   before_action :authenticate_admin!, except: [:show, :index]
 
   # GET /posts
@@ -8,7 +8,7 @@ class PostsController < ApplicationController
     if admin_signed_in?
       @posts = current_admin.posts.most_recent
     else
-      @posts =Post.most_recent
+      @posts = Post.most_recent.published
     end
   end
 
@@ -27,6 +27,15 @@ class PostsController < ApplicationController
   def edit
   end
 
+  def publish
+    @post.publish
+    redirect_to posts_url
+  end
+
+  def unpublish
+    @post.unpublish
+    redirect_to posts_url
+  end
   # POST /posts
   # POST /posts.json
   def create
