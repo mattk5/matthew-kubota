@@ -1,2 +1,13 @@
-<h1>My Posts.</h1>
-<%= render @posts %>
+<h1>My Posts</h1>
+<tr>
+  <% @posts.each do |post| %>
+  <td><%= link_to post.title, post %></td>
+  <% if post.published? %>
+    <td><%= link_to 'Unpublish', unpublish_post_path(post), method: :put, class: 'btn btn-sm btn-primary' %></td>
+  <% else %>
+    <td><%= link_to 'Publish', publish_post_path(post), method: :put, class: 'btn btn-sm btn-primary'%></td>
+  <% end %>
+  <td><%= link_to 'Edit', edit_post_path(post), class: 'btn btn-sm btn-warning' %></td>
+  <td><%= link_to 'Remove', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %></td>
+  <% end %>
+</tr>
