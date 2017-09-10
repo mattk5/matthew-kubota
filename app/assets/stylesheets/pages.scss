@@ -4,11 +4,35 @@
   margin-top: 50px;
 }
 
+.jumbotron {
+  background-color: white;
+}
+
+.display-3 {
+  text-align: center;
+}
+
+.lead {
+  text-align: center;
+}
+
 .intro {
   padding: 30px;
+}
+
+.card-group {
+  margin-top: 30px;
+}
+
+.what {
+  margin-top: 30px;
 }
 // Universal Styling
 .page_title {
   border-bottom: .5px solid;
   padding-bottom: 10px;
+}
+
+.card {
+  padding: 10px;
 }
