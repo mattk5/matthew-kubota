@@ -1,18 +1,43 @@
 <% provide(:page_title, 'Home')%>
 <div class="container">
-    <h1>Welcome</h1>
-    <div class="container intro">
-      <h3>What I Can Do</h3>
-      <b>Coding</b>
-      <p>Give me a computer and I create things! I love working in back-end development and dabbling with front-end design & development as well.</p>
-      <b>Collaboration</b>
-      <p>With a passion for helping others, I enjoy working with people to bring their dreams and ideas to life, staying by their side every step of the way.</p>
-      <b>Learning</b>
-      <p>I am enthusiastic when given the opportunity to learn something new. I value knowledge more since I have begun working in Web Development.</p>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-3">aloha (the "hello" one)</h1>
+        <p class="lead">an island boy in the big apple</p>
+      </div>
     </div>
-  <div class="container">
-    <h1>Recent Post</h1>
-      <%= render @posts %>
-  </div>
+    <div class="container intro">
+      <h3 class="page_title">things i do well.</h3>
+      <div class="card-group">
+        <div class="card">
+          <div class="card-block">
+            <h4 class="card-title">coding</h4>
+            <p class="card-text">Give me a computer and I create things! I love working in back-end development and dabbling with front-end design & development as well.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-block">
+            <h4 class="card-title">collaboration</h4>
+            <p class="card-text">With a passion for helping others, I enjoy working with people to bring their dreams and ideas to life, staying by their side every step of the way.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-block">
+            <h4 class="card-title">learning</h4>
+            <p class="card-text">I am enthusiastic when given the opportunity to learn something new. I value knowledge more since I have begun working in Web Development.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h3 class="page_title">this is what you're getting.</h3>
+      <div class="container">
+        <p class="what">you're getting someone who does a lot of back-end work and is getting frightenly better at creating with the front-end. besides leveling up my coding skills, i enjoy reading non-fiction as well as writing. building my photography skills is on the checklist of things to do.</p>
+      </div>
+    </div>
+    <div class="container">
+      <h3 class="page_title">recent post.</h3>
+        <%= render @posts %>
+    </div>
 </div>
 <!-- <%= link_to 'New Post', new_post_path %> -->
