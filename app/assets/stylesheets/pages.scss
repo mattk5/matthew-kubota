@@ -18,6 +18,7 @@
 
 .intro {
   padding: 30px;
+  font-weight: 300;
 }
 
 .card-group {
@@ -26,17 +27,33 @@
 
 .what {
   margin-top: 30px;
+  font-weight: 300;
 }
 
 .links {
   text-align: center;
   padding: 25px;
 }
+
+//Project Page
+.main-project {
+  margin-top: 20px;
+}
+.text-muted {
+  font-weight: 300;
+}
+.body-project {
+  padding: 15px;
+}
+
 // Universal Styling
 .page_title {
   border-bottom: .5px solid;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+.page-body {
+  font-weight: 300;
 }
 
 .card {
