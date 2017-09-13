@@ -11,6 +11,10 @@
 .post-list {
   font-weight: 300;
 }
+
+.single {
+  margin-top: 30px;
+}
 // Navigation for Blog Post Pages
 .digg_pagination {
   background: white;
@@ -95,5 +99,6 @@ textarea {
   color: #757575;
 }
 .back-posts {
-  color: #0097A7
+  color: #0097A7;
+  padding: 15px;
 }
