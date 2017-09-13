@@ -3,26 +3,26 @@
     <ul class="nav justify-content-end">
       <% if admin_signed_in? %>
         <li class="nav-item">
-          <%= link_to 'Projects', projects_path, class: "nav-link #{yield(:projects_active)}"%>
+          <%= link_to 'projects', projects_path, class: "nav-link #{yield(:projects_active)}"%>
         </li>
         <li class="nav-item">
-          <%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>
+          <%= link_to 'about', about_path, class: "nav-link #{yield(:about_active)}" %>
         </li>
         <li class="nav-item">
-          <%= link_to 'My Posts', posts_path, class: "nav-link #{yield(:my_posts_active)}"%>
+          <%= link_to 'my posts', posts_path, class: "nav-link #{yield(:my_posts_active)}"%>
         </li>
         <li class="nav-item">
-          <%= link_to 'Log Out', destroy_admin_session_path, method: :delete, class: "nav-link"%>
+          <%= link_to 'log Out', destroy_admin_session_path, method: :delete, class: "nav-link"%>
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to 'Projects', projects_path, class: "nav-link #{yield(:projects_active)}"%>
+          <%= link_to 'projects', projects_path, class: "nav-link #{yield(:projects_active)}"%>
         </li>
         <li class="nav-item">
-          <%= link_to 'About', about_path, class: "nav-link #{yield(:about_active)}" %>
+          <%= link_to 'about', about_path, class: "nav-link #{yield(:about_active)}" %>
         </li>
         <li class="nav-item">
-          <%= link_to 'Blog', posts_path, class: "nav-link #{yield(:blog_active)}"%>
+          <%= link_to 'blog', posts_path, class: "nav-link #{yield(:blog_active)}"%>
         </li>
       <% end %>
     </ul>

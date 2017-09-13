@@ -1,6 +1,6 @@
-<% provide(:page_title, 'Home')%>
-<div class="container">
-    <div class="jumbotron jumbotron-fluid">
+<% provide(:page_title, 'Aloha')%>
+<div class="container main">
+    <div class="jumbotron jumbotron-fluid landing">
       <div class="container">
         <h1 class="display-3">aloha! (the "hello" one)</h1>
         <p class="lead">an island kid in a world of endless possibilities</p>
@@ -29,11 +29,15 @@
           </div>
         </div>
     </div>
-    <div class="container">
-      <h3 class="page_title">this is what you're getting.</h3>
-        <div class="container">
-          <p class="what">you're getting someone who does a lot of back-end work and is getting frightenly better at creating with the front-end. besides leveling up my coding skills, i enjoy reading non-fiction as well as writing. building my photography skills is on the checklist of things to do.</p>
-          <p class="what">check out my resume and shoot me an email.</p>
+    <div class="container intro">
+      <h3 class="page_title">infinitely curious. </h3>
+        <div class="container what">
+          <p>I believe there should be a balance in every aspect of our lives.</p>
+          <p>Back-End Deveopment is something I excel at but I coninute to level up my Front-End Development chops.</p>
+          <p>I believe collaboration is a vital skill to master early in your life.</p>
+          <p>Beyond work place productivity, collaboration presents opportunities to grow as humans.</p>
+          <p>I always learn and execute.</p>
+          <p>We should always add value to something everyday by making the most of the talents we possess. </p>
         </div>
         <!-- <div class="row links">
           <div class="col">
@@ -44,8 +48,8 @@
           </div>
         </div> -->
     </div>
-    <div class="container">
-      <h3 class="page_title">recent post.</h3>
+    <div class="container intro">
+      <h3 class="page_title">latest writing.</h3>
         <%= render @posts %>
     </div>
 </div>

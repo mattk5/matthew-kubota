@@ -2,20 +2,19 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <h4 class="footer-title">Contact</h4>
+        <h4 class="footer-title">found in the world here.</h4>
         <ul class="list-unstyled">
-          <li>Name</li>
-          <li>Address</li>
-          <li>Phone</li>
-          <li>Email</li>
+          <li><a class="link" href="https://www.linkedin.com/in/mtkubota/">linkedin.</a></li>
+          <li><a class="link" href="https://github.com/mattk5">github.</a></li>
+          <li><a class="link" href="mattkubota5@gmail.com">send me an email.</a></li>
         </ul>
       </div>
       <div class="col">
-        <h4 class="footer-title">Navigation</h4>
+        <h4 class="footer-title">navigation</h4>
         <ul class="list-unstyled">
-          <li>About</li>
-          <li>Blog</li>
-          <li>Top</li>
+          <li><%= link_to 'projects', projects_path, class: "link #{yield(:projects_active)}" %></li>
+          <li><%= link_to 'about', about_path, class: "link #{yield(:about_active)}" %></li>
+          <li><%= link_to 'blog', posts_path, class: "link #{yield(:blog_active)}" %></li>
         </ul>
       </div>
     </div>
