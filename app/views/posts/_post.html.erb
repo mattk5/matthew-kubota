@@ -1,8 +1,15 @@
-<div class="card post-list" style="width: 20rem;">
+<ul class="list-group lists">
+  <li class="list-group-item lists-single list-title"><%= link_to post.title, post%></li>
+  <li class="list-group-item lists-single"><small class="pub"><%= post.published_date %></small><small class="description"><%= truncate(post.description, length: 150) %></small></li>
+</ul>
+<!-- <div class="card post-list" style="width: 20rem;">
   <div class="card-block single">
     <h4 class="card-title"><%= link_to post.title, post %></h4>
     <p class="card-publish"><%= post.published_date %></p>
     <p class="card-text"><%= post.description %></p>
     <%= link_to 'see post', post, class: 'card-link' %>
   </div>
-</div>
+</div> -->
+<!-- <ul class="list-group lists">
+  <li class="list-group-item lists-single"><%= link_to post.title, post %><small class="pub"><%= post.published_date %></small><small class="description"><%= truncate(post.description, length: 150) %></small></li>
+</ul> -->

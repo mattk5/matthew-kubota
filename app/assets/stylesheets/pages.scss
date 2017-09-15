@@ -42,7 +42,12 @@
 .main-project {
   margin-top: 20px;
 }
+.project-links {
+}
 .text-muted {
+  a {
+    color: #0097A7;
+  }
   font-weight: 300;
 }
 .body-project {
@@ -59,6 +64,7 @@
 }
 .page-body {
   font-weight: 300;
+  padding-top: 20px;
 }
 
 .card {

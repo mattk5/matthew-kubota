@@ -2,10 +2,11 @@
 <% provide(:blog_active, 'active')%>
 
 <div class="container post-list">
-  <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+  <!-- <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2"> -->
+  <div>
     <h1><%= @post.title %></h1>
     <p class="published"><%= @post.published_date %></p>
-    <%= @post.body.html_safe %>
+    <p><%= raw(sanitize(@post.body)) %></p>
   </div>
 </div>
 <% if admin_signed_in? %>

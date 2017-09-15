@@ -11,12 +11,17 @@
 .post-list {
   font-weight: 300;
 }
-
+.list-title {
+  font-size: 24px;
+}
 .single {
   margin-top: 30px;
 }
 // Navigation for Blog Post Pages
 .digg_pagination {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  font-weight: 300;
   background: white;
   cursor: default;
   /* self-clearing method: */ }
@@ -30,7 +35,7 @@
     border: 1px solid #dddddd; }
   .digg_pagination .current {
     font-style: normal;
-    font-weight: bold;
+    font-weight: 300;
     background: #2e6ab1;
     color: white;
     border: .5px solid #2e6ab1; }
@@ -65,8 +70,28 @@
 
 
 // Styles for the Post partial
+.lists {
+  margin: 15px;
+  width: 100%;
+}
+.lists-single {
+  padding: 0;
+  font-weight: 300;
+  border: none;
+  a {
+    color: #0097A7;
+  }
+}
+.pub {
+  color: #757575;
+  padding-left: 15px;
+}
+
+.description {
+  padding-left: 15px;
+}
 .card {
-  text-align: center;
+  // text-align: center;
   border: none;
   margin: 0 auto;
   float: none;
@@ -98,6 +123,7 @@ textarea {
 .published {
   color: #757575;
 }
+
 .back-posts {
   color: #0097A7;
   padding: 15px;
