@@ -1,11 +1,11 @@
 <div class="container">
   <% if admin_signed_in? %>
-    <% provide(:page_title, 'My Posts') %>
+    <% provide(:page_title, 'my posts') %>
     <% provide(:blog_active, 'active') %>
       <%= render 'admin' %>
       <%= link_to 'New Post', new_post_path %>
   <% else %>
-    <% provide(:page_title, 'Blog') %>
+    <% provide(:page_title, 'blog') %>
     <% provide(:blog_active, 'active') %>
       <div class="row page_title">
         <h1>blog posts</h1>
