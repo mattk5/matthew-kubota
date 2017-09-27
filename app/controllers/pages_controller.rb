@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def index
-    @posts = Post.last
+    @posts = Post.most_recent.published
   end
 
   def about
