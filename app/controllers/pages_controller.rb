@@ -11,4 +11,8 @@ class PagesController < ApplicationController
 
   def projects
   end
+
+  def pdf_download
+    send_file "#{Rails.root}/public/MattKubotaResume.pdf", type: "application/pdf", x_sendfile: true
+  end
 end
